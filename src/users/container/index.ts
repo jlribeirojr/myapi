@@ -1,5 +1,6 @@
 import { IUsersRepository } from '@users/repositories/IUsersRepository'
 import { UsersRepository } from '@users/repositories/UsersRepositoy'
+import { CreateLoginController } from '@users/useCases/createLogin/CreateLoginController'
 import { CreateUserController } from '@users/useCases/createUser/CreateUserController'
 import { ListUsersController } from '@users/useCases/listUsers/ListUsersController'
 
@@ -11,3 +12,4 @@ container.registerSingleton<IUsersRepository>(
 )
 container.registerSingleton('CreateUserController', CreateUserController)
 container.registerSingleton('ListUsersControllers', ListUsersController)
+container.registerSingleton('CreateLoginController', CreateLoginController)
